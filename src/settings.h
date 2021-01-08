@@ -28,22 +28,22 @@ See more at http://blog.squix.ch
 const String CONFIG_SSID = "ESPaperConfig";
 
 // Setup
-String WIFI_SSID = "";
-String WIFI_PASS = "";
+String WIFI_SSID = "newport";
+String WIFI_PASS = "superpuperkey";
 
 const int UPDATE_INTERVAL_SECS = 20 * 60; // Update every 20 minutes
 
 // OpenWeatherMap Settings as per https://docs.thingpulse.com/guides/espaper-plus-kit/#configuration-customization
 // Sign up here to get an API key: https://docs.thingpulse.com/how-tos/openweathermap-key/
-String DISPLAYED_CITY_NAME = "";
-String OPEN_WEATHER_MAP_APP_ID = "";
+String DISPLAYED_CITY_NAME = "Kyiv";
+String OPEN_WEATHER_MAP_APP_ID = "487cedcdd7c24aebeab72fb54687d59e";
 /*
 Go to https://openweathermap.org/find?q= and search for a location. Go through the
 result set and select the entry closest to the actual location you want to display 
 data for. It'll be a URL like https://openweathermap.org/city/2657896. The number
 at the end is what you assign to the constant below.
  */
-String OPEN_WEATHER_MAP_LOCATION_ID = "2657896";
+String OPEN_WEATHER_MAP_LOCATION_ID = "703448";
 /*
 Arabic -> ar, Bulgarian -> bg, Catalan -> ca, Czech -> cz, German -> de, Greek -> el,
 English -> en, Persian (Farsi) -> fa, Finnish -> fi, French -> fr, Galician -> gl,
@@ -55,9 +55,9 @@ Chinese Simplified -> zh_cn, Chinese Traditional -> zh_tw.
 */
 String OPEN_WEATHER_MAP_LANGUAGE = "en";
 
-#define UTC_OFFSET + 1
-struct dstRule StartRule = {"CEST", Last, Sun, Mar, 2, 3600}; // Central European Summer Time = UTC/GMT +2 hours
-struct dstRule EndRule = {"CET", Last, Sun, Oct, 2, 0};       // Central European Time = UTC/GMT +1 hour
+#define UTC_OFFSET + 2
+struct dstRule StartRule = {"EEST", Last, Sun, Mar, 2, 3600}; // Central European Summer Time = UTC/GMT +2 hours
+struct dstRule EndRule = {"EET", Last, Sun, Oct, 2, 0};       // Central European Time = UTC/GMT +1 hour
 
 // Settings for Boston
 // #define UTC_OFFSET -5
@@ -104,9 +104,9 @@ bool IS_STYLE_12HR = false;
 /*
  * BUSY>gpio4 RST>gpio2 DC>gpio5 CS>gpio15 CLK>gpio14 DIN>gpio13
  */
-#define CS 15  // D8
-#define RST 2  // D4
-#define DC 5   // D1
+#define CS 5  // D8
+#define RST 12  // D4
+#define DC 19   // D1
 #define BUSY 4 // D2
 #define USR_BTN 12 // D6
 

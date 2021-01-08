@@ -18,7 +18,7 @@ SOFTWARE.
 See more at http://blog.squix.ch
 */
 
-#include <ESP8266WebServer.h>
+#include <WebServer.h>
 #include <MiniGrafx.h>
 
 const char HTML_HEAD[] PROGMEM            = "<!DOCTYPE html><html lang=\"en\"><head><meta name=\"viewport\" content=\"width=device-width, initial-scale=1, user-scalable=no\"/><title>{v}</title>";
@@ -75,7 +75,7 @@ const char* const language_table[] PROGMEM = {language_0, language_1, language_2
   language_18, language_19, language_20, language_21, language_22, language_23, language_24, language_25, language_26, language_27,
   language_28, language_29, language_30, language_31, language_32};
 
-ESP8266WebServer server (80);
+WebServer server (80);
 
 String getFormField(String id, String placeholder, String length, String value, String customHTML) {
     String pitem = FPSTR(HTML_FORM_PARAM);

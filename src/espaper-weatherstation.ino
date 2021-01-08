@@ -32,7 +32,7 @@ See more at https://blog.squix.org
 
 #include <Arduino.h>
 #include <SPI.h>
-#include <ESP8266WiFi.h>
+#include <WiFi.h>
 #include "WeatherStationFonts.h"
 
 
